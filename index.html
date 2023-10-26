@@ -23,20 +23,30 @@
           src="./assets/images/logo/ohmyfood.png"
           alt="logo oh my food"
         />
-        <i class="fa-solid fa-location-dot header__icon">Paris, Belleville</i>
+        <div class="header__location">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Paris, Belleville</span>
+        </div>
       </div>
     </header>
     <main>
-      <section>
-        <a class="card" href="./restaurants/page_la_palette_du_gout.html">
-          <img
-            class="card__img"
-            src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt="restaurent la palette du goût"
-          />
-          <div>
-            <h1>La palette du goût</h1>
-            <p>Ménilmontant</p>
+      <section id="restaurants">
+        <h1>Restaurants</h1>
+        <a href="./restaurants/page_la_palette_du_gout.html">
+          <div class="card">
+            <img
+              class="card__img"
+              src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="restaurent la palette du goût"
+            />
+            <p class="card__alert">Nouveau</p>
+            <div class="card__info">
+              <div>
+                <h1>La palette du goût</h1>
+                <p>Ménilmontant</p>
+              </div>
+              <img src="./assets/images/logo/heart.svg" alt="icon heart" />
+            </div>
           </div>
         </a>
       </section>
