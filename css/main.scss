@@ -14,3 +14,15 @@
 
 @import "pages/_home.scss";
 @import "pages/_restaurant.scss";
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 23.4375rem;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 1rem;
+  border: 1px solid gray;
+}
