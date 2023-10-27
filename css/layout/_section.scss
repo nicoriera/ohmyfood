@@ -1,0 +1,10 @@
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1rem;
+}
+
+#reservation,
+#restaurants {
+  background-color: var(--fourth-color, #f6f6f6);
+}
