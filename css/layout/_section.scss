@@ -8,3 +8,22 @@ section {
 #restaurants {
   background-color: var(--fourth-color, #f6f6f6);
 }
+
+#reservation {
+  align-items: center;
+
+  .reservation__paragraphe {
+    font-family: var(--paragraph-font-family, "Roboto");
+    font-size: var(--paragraph-font-size, 1.125rem);
+    font-style: var(--paragraph-font-style, normal);
+    font-weight: var(--paragraph-font-weight, 300);
+    line-height: var(--paragraph-line-height, normal);
+    color: var(--paragraph-font-color, #353535);
+  }
+
+  .reservation__paragraphe,
+  .title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+}

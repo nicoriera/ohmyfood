@@ -1,6 +1,49 @@
+// COLOR
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $thirdary-color: #99e2d0;
 $fourth-color: #f6f6f6;
+$fifth-color: #353535;
 
+// FONT
 $font-primary: "Roboto", sans-serif;
+
+$title-font-size: 1.5rem;
+$title-font-family: $font-primary;
+$title-font-weight: 700;
+$title-font-style: normal;
+$title-line-height: normal;
+
+$paragraph-font-size: 1.125rem;
+$paragraph-font-family: $font-primary;
+$paragraph-font-weight: 300;
+$paragraph-font-style: normal;
+$paragraph-line-height: normal;
+$paragraph-font-color: $fifth-color;
+
+$primary-font-size: 1rem;
+$primary-font-family: $font-primary;
+$primary-font-weight: 500;
+$primary-font-style: normal;
+$primary-line-height: normal;
+$primary-font-color: white;
+
+// BUTTON
+$button-gradient: linear-gradient(
+  193deg,
+  $primary-color -11.44%,
+  $secondary-color 123.93%
+);
+$button-hover-gradient: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  ),
+  linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+$button-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+// FONTCIONNEMENT
+$fonctionnement-background: $fourth-color;
+
+// SHADOW
+$shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
