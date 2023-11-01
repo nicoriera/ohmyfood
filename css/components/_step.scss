@@ -1,0 +1,42 @@
+.step {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 20.15538rem;
+  height: 4.52369rem;
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+  background: var(--fonctionnement-background, #f6f6f6);
+  box-shadow: var(--shadow, 0px 4px 15px 0px rgba(0, 0, 0, 0.15));
+}
+
+.step__text span {
+  margin-left: 1rem;
+  align-items: baseline;
+}
+
+.step__text i {
+  color: var(--grey-tint-4, #7e7e7e);
+
+  &:hover {
+    color: var(--primary-color, #9356dc);
+  }
+}
+
+.step > span {
+  display: flex;
+  position: absolute;
+  color: white;
+  font-size: 0.8rem;
+  background: var(--primary-color, #9356dc);
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  left: -9;
+}

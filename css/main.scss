@@ -7,6 +7,7 @@
 
 @import "components/_button.scss";
 @import "components/_card.scss";
+@import "components/_step.scss";
 
 @import "layout/_header.scss";
 @import "layout/_footer.scss";
@@ -19,17 +20,23 @@
 body {
   display: flex;
   flex-direction: column;
-  width: 23.4375rem;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
+  width: 23.4375rem;
+  height: 100%;
   font-family: Roboto;
   font-size: 1rem;
-  border: 1px solid gray;
 }
 
 main {
   width: 100%;
   margin: 0 auto;
   padding: 0;
+}
+
+.title {
+  font-family: var(--title-font-family, "Roboto");
+  font-size: var(--title-font-size, 1.5rem);
+  font-style: var(--title-font-style, normal);
+  font-weight: var(--title-font-weight, 700);
+  line-height: var(--title-line-height, normal);
 }
