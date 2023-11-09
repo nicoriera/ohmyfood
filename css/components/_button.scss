@@ -13,10 +13,11 @@
   border: none;
   background: $button-gradient;
   box-shadow: $button-shadow;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
     background: $button-hover-gradient;
     box-shadow: $button-hover-shadow;
+    transform: scale(1.05);
   }
 }

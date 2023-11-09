@@ -1,3 +1,15 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem 6rem;
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+  }
+}
 .card {
   position: relative;
   width: 21.25rem;
@@ -7,6 +19,10 @@
   border-radius: 0.9375rem;
   background: #fff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 768px) {
+    width: 29rem;
+  }
 
   .card__img {
     width: 100%;

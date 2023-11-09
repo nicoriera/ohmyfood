@@ -25,12 +25,17 @@ body {
   height: 100%;
   font-family: Roboto;
   font-size: 1rem;
+
+  @media (min-width: $breakpoint-medium) {
+    width: 100%;
+  }
 }
 
-main {
+.main__contenair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  margin: 0 auto;
-  padding: 0;
 }
 
 .title {

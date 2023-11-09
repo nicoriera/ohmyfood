@@ -2,6 +2,40 @@ section {
   display: flex;
   flex-direction: column;
   padding: 3rem 1rem;
+
+  @media (min-width: 768px) {
+    padding: 3rem 11rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90rem;
+  padding: 0 11rem;
+}
+
+#fonctinoement,
+#reservation,
+#restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#fonctionnement {
+  display: flex;
+  flex-direction: column;
+
+  .steps {
+    @media (min-width: $breakpoint-xlarge) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }
 
 #reservation,
