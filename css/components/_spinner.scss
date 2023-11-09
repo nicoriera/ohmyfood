@@ -9,6 +9,10 @@
   z-index: 9999;
   animation: hide 3s forwards;
   -webkit-animation: hide 3s forwards;
+
+  @media (min-width: $breakpoint-medium) {
+    display: none;
+  }
 }
 
 .spinner__spin {
@@ -22,6 +26,10 @@
   border-top-color: var(--primary-color, #9356dc);
   animation: spinner__spin 1s ease-in-out infinite, hide 3s forwards;
   -webkit-animation: spinner__spin 1s ease-in-out infinite, hide 3s forwards;
+
+  @media (min-width: $breakpoint-medium) {
+    display: none;
+  }
 }
 @keyframes spinner__spin {
   to {
