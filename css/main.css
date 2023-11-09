@@ -300,6 +300,11 @@ input {
   animation: hide 3s forwards;
   -webkit-animation: hide 3s forwards;
 }
+@media (min-width: 768px) {
+  .spinner {
+    display: none;
+  }
+}
 
 .spinner__spin {
   display: inline-block;
@@ -312,6 +317,11 @@ input {
   border-top-color: var(--primary-color, #9356dc);
   animation: spinner__spin 1s ease-in-out infinite, hide 3s forwards;
   -webkit-animation: spinner__spin 1s ease-in-out infinite, hide 3s forwards;
+}
+@media (min-width: 768px) {
+  .spinner__spin {
+    display: none;
+  }
 }
 
 @keyframes spinner__spin {
