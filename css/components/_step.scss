@@ -1,7 +1,14 @@
+.steps {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1rem;
+  align-items: center;
+}
+
 .step {
   display: flex;
   position: relative;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   padding: 2rem;
   margin: 1rem;

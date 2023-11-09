@@ -1,18 +1,30 @@
 footer {
   background-color: var(--fifth-color, #353535);
   display: flex;
-
   width: 23.4375rem;
   padding: 1.375rem 1.5625rem;
   flex-direction: column;
   align-items: flex-start;
   color: white;
 
+  @media (min-width: 768px) {
+    width: 100%;
+    padding: 1.375rem 3.125rem;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
   .footer__links {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      margin-top: 0;
+      margin-right: 5rem;
+    }
   }
 }
 
