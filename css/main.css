@@ -311,7 +311,7 @@ input {
 }
 @media (min-width: 768px) {
   .spinner {
-    display: none;
+    width: 100%;
   }
 }
 
@@ -329,7 +329,10 @@ input {
 }
 @media (min-width: 768px) {
   .spinner__spin {
-    display: none;
+    width: 200px;
+    height: 200px;
+    border: 5px solid var(--secondary-color, #ff79da);
+    border-top-color: var(--primary-color, #9356dc);
   }
 }
 
