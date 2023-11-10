@@ -11,7 +11,7 @@
   -webkit-animation: hide 3s forwards;
 
   @media (min-width: $breakpoint-medium) {
-    display: none;
+    width: 100%;
   }
 }
 
@@ -28,7 +28,10 @@
   -webkit-animation: spinner__spin 1s ease-in-out infinite, hide 3s forwards;
 
   @media (min-width: $breakpoint-medium) {
-    display: none;
+    width: 200px;
+    height: 200px;
+    border: 5px solid var(--secondary-color, #ff79da);
+    border-top-color: var(--primary-color, #9356dc);
   }
 }
 @keyframes spinner__spin {
