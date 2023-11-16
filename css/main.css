@@ -361,7 +361,6 @@ input {
 .header {
   display: flex;
   width: 100%;
-  height: 7.0625rem;
   padding-bottom: 0px;
   flex-direction: column;
   justify-content: center;
@@ -371,7 +370,7 @@ input {
 .header .header__logo {
   display: flex;
   width: 100%;
-  padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
+  padding: 0.875rem 3rem 0.8125rem 3rem;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -379,6 +378,10 @@ input {
   font-family: Shrikhand, sans-serif;
   font-size: 2.25rem;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.header .header__logo i {
+  margin-right: 2.5rem;
+  font-size: 1.5rem;
 }
 .header .header__location {
   display: flex;
@@ -463,6 +466,9 @@ section {
   width: 100%;
 }
 
+#fonctionnement .steps {
+  padding: 0;
+}
 @media (min-width: 1280px) {
   #fonctionnement .steps {
     display: flex;
@@ -492,6 +498,84 @@ section {
 #reservation .title {
   text-align: center;
   margin-bottom: 1.5rem;
+}
+
+#menu {
+  position: relative;
+  padding: 0;
+  top: -1.9rem;
+}
+
+.menu__img {
+  width: 23.4375rem;
+  object-fit: cover;
+}
+
+.menu__title {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+  font-family: Shrikhand, sans-serif;
+  font-size: 1.75rem;
+}
+
+.menu__info {
+  margin-top: 2rem;
+}
+.menu__info h2 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.menu__info .menu__info--line {
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 0.4rem;
+  width: 40px;
+}
+
+.menu__background {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -1.9rem;
+  width: 23.4375rem;
+  flex-shrink: 0;
+  padding: 2.5rem 0.8rem;
+  background-color: #f6f6f6;
+  border-radius: 2rem 2rem 0 0;
+}
+.menu__background .button__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.plateandprice__container {
+  display: flex;
+  width: 100%;
+  height: 4.3125rem;
+  padding: 0.9375rem;
+  margin: 1rem 0;
+  flex-shrink: 0;
+  border-radius: 0.94019rem;
+  background: var(--White, #fff);
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+}
+.plateandprice__container .plateandprice__plate {
+  display: flex;
+  height: 2.625rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.3125rem;
+  flex: 1 0 0;
+}
+.plateandprice__container .plateandprice__plate p:nth-child(2) {
+  font-weight: 300;
+}
+.plateandprice__container .plateandprice__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.3125rem;
 }
 
 body {

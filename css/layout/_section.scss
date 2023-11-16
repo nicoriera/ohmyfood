@@ -30,6 +30,7 @@ section {
 
 #fonctionnement {
   .steps {
+    padding: 0;
     @media (min-width: $breakpoint-xlarge) {
       display: flex;
       flex-direction: row;
@@ -61,4 +62,10 @@ section {
     text-align: center;
     margin-bottom: 1.5rem;
   }
+}
+
+#menu {
+  position: relative;
+  padding: 0;
+  top: -1.9rem;
 }
