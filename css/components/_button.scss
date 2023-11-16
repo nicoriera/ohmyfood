@@ -19,5 +19,6 @@
     background: $button-hover-gradient;
     box-shadow: $button-hover-shadow;
     transform: scale(1.05);
+    cursor: pointer;
   }
 }
