@@ -30,3 +30,7 @@
 @mixin shadow-button-hover {
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.39);
 }
+
+@mixin transition($property, $duration, $ease) {
+  transition: $property $duration $ease;
+}

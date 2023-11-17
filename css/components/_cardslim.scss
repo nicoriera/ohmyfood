@@ -9,39 +9,66 @@
   background: var(--White, #fff);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 
+  &:hover {
+    .plateandprice__price {
+      transform: translateX(-10px);
+      opacity: 1;
+    }
+
+    .plateandprice__added {
+      display: flex;
+      opacity: 1;
+    }
+
+    .plateandprice__plate {
+      width: calc(100% - 116px);
+      margin-right: 2rem;
+    }
+  }
+
   .plateandprice__plate {
+    width: 100%;
     display: flex;
     height: 2.625rem;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 0.3125rem;
-    flex: 1 0 0;
+    @include transition(transform, 0.3s, ease-in);
+
+    p {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    p:nth-child(2) {
+      font-weight: $paragraph-font-weight;
+      font-size: 0.94rem;
+    }
   }
 
-  .plateandprice__plate p:nth-child(2) {
-    font-weight: $paragraph-font-weight;
-    font-size: 0.94rem;
-    text-overflow: ellipsis;
-  }
   .plateandprice__price {
     display: flex;
     align-items: flex-end;
     gap: 0.3125rem;
+    @include transition(transform, 0.3s, ease-in);
   }
 
   .plateandprice__added {
+    display: none;
     position: relative;
-    width: 100%;
     height: 100%;
     cursor: pointer;
+    @include transition(transform, 0.3s, ease-in);
 
     div {
       display: flex;
       width: 69px;
       height: 69px;
-      left: -27px;
-      top: -31px;
+      left: 3px;
+      top: -15px;
       justify-content: center;
       align-items: center;
       position: absolute;
@@ -51,13 +78,30 @@
     }
 
     i {
+      position: absolute;
       width: 20px;
       height: 20px;
+      left: 27px;
+      top: 10px;
       background-color: white;
       color: $thirdary-color;
       border-radius: 50%;
       font-size: 1.3rem;
-      background: white;
     }
   }
 }
+
+// .plateandprice__container:hover .plateandprice__price {
+//   transform: translateX(-10px);
+//   opacity: 1;
+// }
+
+// .plateandprice__container:hover .plateandprice__added {
+//   display: flex;
+//   opacity: 1;
+// }
+
+// .plateandprice__container:hover .plateandprice__plate {
+//   width: calc(100% - 116px);
+//   margin-right: 2rem;
+// }
