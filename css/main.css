@@ -377,6 +377,11 @@ input {
     width: 92%;
   }
 }
+@media (min-width: 1024px) {
+  .plateandprice__parent:hover .plateandprice__container {
+    width: 94%;
+  }
+}
 
 .plateandprice__container {
   display: flex;

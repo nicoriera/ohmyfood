@@ -17,6 +17,10 @@
     @media (min-width: $breakpoint-medium) {
       width: 92%;
     }
+
+    @media (min-width: $breakpoint-large) {
+      width: 94%;
+    }
   }
 }
 
