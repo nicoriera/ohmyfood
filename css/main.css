@@ -228,7 +228,6 @@ input {
 .step {
   display: flex;
   position: relative;
-  flex-direction: column;
   align-items: center;
   padding: 2rem;
   margin: 1rem;
@@ -359,6 +358,26 @@ input {
     visibility: hidden;
   }
 }
+.plateandprice__parent {
+  display: flex;
+  flex-direction: row;
+}
+.plateandprice__parent:hover .plateandprice__added {
+  animation: fadeInRight forwards;
+}
+.plateandprice__parent:hover .plateandprice__plate {
+  width: 90%;
+}
+.plateandprice__parent:hover .plateandprice__container {
+  width: 80%;
+  border-radius: 0.94019rem 0 0 0.94019rem;
+}
+@media (min-width: 768px) {
+  .plateandprice__parent:hover .plateandprice__container {
+    width: 92%;
+  }
+}
+
 .plateandprice__container {
   display: flex;
   width: 100%;
@@ -370,18 +389,6 @@ input {
   background: var(--White, #fff);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
-.plateandprice__container:hover .plateandprice__price {
-  transform: translateX(-10px);
-  opacity: 1;
-}
-.plateandprice__container:hover .plateandprice__added {
-  display: flex;
-  opacity: 1;
-}
-.plateandprice__container:hover .plateandprice__plate {
-  width: calc(100% - 116px);
-  margin-right: 2rem;
-}
 .plateandprice__container .plateandprice__plate {
   width: 100%;
   display: flex;
@@ -390,7 +397,6 @@ input {
   justify-content: center;
   align-items: flex-start;
   gap: 0.3125rem;
-  transition: transform 0.3s ease-in;
 }
 .plateandprice__container .plateandprice__plate p {
   text-overflow: ellipsis;
@@ -406,40 +412,70 @@ input {
   display: flex;
   align-items: flex-end;
   gap: 0.3125rem;
-  transition: transform 0.3s ease-in;
 }
-.plateandprice__container .plateandprice__added {
-  display: none;
-  position: relative;
-  height: 100%;
-  cursor: pointer;
-  transition: transform 0.3s ease-in;
+
+.plateandprice__added {
+  position: absolute;
+  right: 14px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 4.3125rem;
+  margin: 1rem 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  opacity: 0;
 }
-.plateandprice__container .plateandprice__added div {
+@media (min-width: 768px) {
+  .plateandprice__added {
+    right: 240px;
+  }
+}
+.plateandprice__added div {
   display: flex;
   width: 69px;
   height: 69px;
-  left: 3px;
-  top: -15px;
   justify-content: center;
   align-items: center;
-  position: absolute;
   background: #99e2d0;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
 }
-.plateandprice__container .plateandprice__added i {
-  position: absolute;
+.plateandprice__added i {
   width: 20px;
   height: 20px;
-  left: 27px;
-  top: 10px;
   background-color: white;
   color: #99e2d0;
   border-radius: 50%;
   font-size: 1.3rem;
 }
 
+.plateandprice__checked {
+  margin-left: 1rem;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  25% {
+    opacity: 0.25;
+    transform: translateX(75%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateX(25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .header {
   display: flex;
   width: 100%;
@@ -587,24 +623,49 @@ section {
   padding: 0;
   top: -1.9rem;
 }
+@media (min-width: 768px) {
+  #menu {
+    width: 80%;
+  }
+}
 
 .menu__img {
   width: 23.4375rem;
   height: 17.1875rem;
   object-fit: cover;
 }
+@media (min-width: 768px) {
+  .menu__img {
+    width: 100%;
+    height: 25rem;
+  }
+}
 
 .menu__title {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   width: 90%;
   justify-content: space-between;
   font-family: Shrikhand, sans-serif;
   font-size: 1.75rem;
 }
+.menu__title h1 {
+  margin-right: 1rem;
+}
+@media (min-width: 768px) {
+  .menu__title {
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .menu__info {
   margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .menu__info {
+    width: 100%;
+  }
 }
 .menu__info h2 {
   font-size: 1rem;
@@ -621,10 +682,16 @@ section {
   flex-direction: column;
   margin-bottom: -1.9rem;
   width: 23.4375rem;
-  flex-shrink: 0;
   padding: 2.5rem 0.8rem;
   background-color: #f6f6f6;
   border-radius: 2rem 2rem 0 0;
+}
+@media (min-width: 768px) {
+  .menu__background {
+    width: 100%;
+    align-items: center;
+    padding: 2.5rem 15rem;
+  }
 }
 .menu__background .button__container {
   display: flex;
