@@ -68,4 +68,8 @@ section {
   position: relative;
   padding: 0;
   top: -1.9rem;
+
+  @media (min-width: $breakpoint-medium) {
+    width: 80%;
+  }
 }
