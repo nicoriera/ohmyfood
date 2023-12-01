@@ -30,8 +30,8 @@ footer {
 
 footer h2 {
   font-family: Shrikhand, sans-serif;
-  font-size: var(--title-font-size, 1.5rem);
-  font-style: var(--title-font-style, normal);
-  font-weight: var(--title-font-weight, 700);
-  line-height: var(--title-line-height, normal);
+  font-size: $title-font-size;
+  font-style: $title-font-style;
+  font-weight: $title-font-weight;
+  line-height: $title-line-height;
 }
