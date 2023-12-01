@@ -281,7 +281,7 @@ input {
   text-align: center;
   justify-content: center;
   align-items: center;
-  left: -9;
+  left: -9px;
 }
 
 .card__like {
@@ -414,7 +414,7 @@ input {
   margin: 1rem 0;
   flex-shrink: 0;
   border-radius: 0.94019rem;
-  background: var(--White, #fff);
+  background: #fff;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
 .plateandprice__container .plateandprice__plate {
@@ -480,19 +480,16 @@ input {
 
 @keyframes fadeInRight {
   0% {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(100%);
   }
   25% {
-    opacity: 0.25;
     transform: translateX(75%);
   }
   50% {
-    opacity: 0.5;
     transform: translateX(50%);
   }
   75% {
-    opacity: 0.75;
     transform: translateX(25%);
   }
   100% {
@@ -507,7 +504,6 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: -0.1rem;
 }
 .header .header__logo {
   display: flex;
@@ -570,10 +566,10 @@ footer .footer__links {
 
 footer h2 {
   font-family: Shrikhand, sans-serif;
-  font-size: var(--title-font-size, 1.5rem);
-  font-style: var(--title-font-style, normal);
-  font-weight: var(--title-font-weight, 700);
-  line-height: var(--title-line-height, normal);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 section {
@@ -621,19 +617,19 @@ section {
 
 #reservation,
 #restaurants {
-  background-color: var(--fourth-color, #f6f6f6);
+  background-color: #f6f6f6;
 }
 
 #reservation {
   align-items: center;
 }
 #reservation .reservation__paragraphe {
-  font-family: var(--paragraph-font-family, "Roboto");
-  font-size: var(--paragraph-font-size, 1.125rem);
-  font-style: var(--paragraph-font-style, normal);
-  font-weight: var(--paragraph-font-weight, 300);
-  line-height: var(--paragraph-line-height, normal);
-  color: var(--paragraph-font-color, #353535);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #353535;
 }
 #reservation .reservation__paragraphe,
 #reservation .title {

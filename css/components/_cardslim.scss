@@ -37,7 +37,7 @@
   margin: 1rem 0;
   flex-shrink: 0;
   border-radius: 0.94019rem;
-  background: var(--White, #fff);
+  background: #fff;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 
   .plateandprice__plate {
@@ -109,19 +109,16 @@
 
 @keyframes fadeInRight {
   0% {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(100%);
   }
   25% {
-    opacity: 0.25;
     transform: translateX(75%);
   }
   50% {
-    opacity: 0.5;
     transform: translateX(50%);
   }
   75% {
-    opacity: 0.75;
     transform: translateX(25%);
   }
   100% {
