@@ -3,6 +3,7 @@
   flex-direction: row;
 
   &:hover .plateandprice__added {
+    display: flex;
     animation: fadeInRight forwards;
   }
 
@@ -15,11 +16,15 @@
     border-radius: 0.94019rem 0 0 0.94019rem;
 
     @media (min-width: $breakpoint-medium) {
-      width: 92%;
+      width: 86%;
     }
 
     @media (min-width: $breakpoint-large) {
       width: 94%;
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+      width: 98%;
     }
   }
 }
@@ -65,8 +70,9 @@
 }
 
 .plateandprice__added {
+  display: none;
   position: absolute;
-  right: 14px;
+  right: 0px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -75,10 +81,6 @@
   transform: translateX(100%);
   transition: transform 0.3s ease;
   opacity: 0;
-
-  @media (min-width: $breakpoint-medium) {
-    right: 240px;
-  }
 
   div {
     display: flex;

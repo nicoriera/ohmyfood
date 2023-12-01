@@ -29,6 +29,9 @@
 
 .menu__info {
   margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 
   @media (min-width: $breakpoint-medium) {
     width: 100%;
@@ -46,6 +49,20 @@
   }
 }
 
+.menu__info.entrée,
+.menu__info.plat,
+.menu__info.dessert {
+  animation: appear 0.5s ease forwards;
+}
+
+.menu__info.plat {
+  animation-delay: 0.2s;
+}
+
+.menu__info.dessert {
+  animation-delay: 0.4s;
+}
+
 .menu__background {
   display: flex;
   flex-direction: column;
@@ -58,12 +75,19 @@
   @media (min-width: $breakpoint-medium) {
     width: 100%;
     align-items: center;
-    padding: 2.5rem 15rem;
+    padding: 2.5rem 5rem;
   }
 
   .button__container {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
