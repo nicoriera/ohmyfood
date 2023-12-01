@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *:before,
 *:after {
@@ -137,17 +138,16 @@ input {
 .cards {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 1rem;
 }
-@media (min-width: 1280px) {
+@media (min-width: 992px) {
   .cards {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem 6rem;
+    gap: 3rem 4rem;
     margin-top: 1rem;
   }
 }
@@ -164,7 +164,17 @@ input {
 }
 @media (min-width: 768px) {
   .card {
-    width: 29rem;
+    width: 24rem;
+  }
+}
+@media (min-width: 992px) {
+  .card {
+    width: 19rem;
+  }
+}
+@media (min-width: 1200px) {
+  .card {
+    width: 31rem;
   }
 }
 .card .card__img {
@@ -192,13 +202,13 @@ input {
 }
 .card .card__info {
   display: flex;
+  width: 100%;
   height: 4.6875rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-bottom-left-radius: 0.9375rem;
   border-bottom-right-radius: 0.9375rem;
-  border: 1px solid #eaeaea;
   padding: 1rem;
 }
 .card .card__info h1 {
@@ -363,6 +373,7 @@ input {
   flex-direction: row;
 }
 .plateandprice__parent:hover .plateandprice__added {
+  display: flex;
   animation: fadeInRight forwards;
 }
 .plateandprice__parent:hover .plateandprice__plate {
@@ -374,12 +385,17 @@ input {
 }
 @media (min-width: 768px) {
   .plateandprice__parent:hover .plateandprice__container {
-    width: 92%;
+    width: 86%;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .plateandprice__parent:hover .plateandprice__container {
     width: 94%;
+  }
+}
+@media (min-width: 1200px) {
+  .plateandprice__parent:hover .plateandprice__container {
+    width: 98%;
   }
 }
 
@@ -420,8 +436,9 @@ input {
 }
 
 .plateandprice__added {
+  display: none;
   position: absolute;
-  right: 14px;
+  right: 0px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -430,11 +447,6 @@ input {
   transform: translateX(100%);
   transition: transform 0.3s ease;
   opacity: 0;
-}
-@media (min-width: 768px) {
-  .plateandprice__added {
-    right: 240px;
-  }
 }
 .plateandprice__added div {
   display: flex;
@@ -585,14 +597,13 @@ section {
 #restaurants {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
 }
 
 #fonctionnement .steps {
   padding: 0;
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   #fonctionnement .steps {
     display: flex;
     flex-direction: row;
@@ -666,6 +677,9 @@ section {
 
 .menu__info {
   margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 @media (min-width: 768px) {
   .menu__info {
@@ -682,6 +696,20 @@ section {
   width: 40px;
 }
 
+.menu__info.entrée,
+.menu__info.plat,
+.menu__info.dessert {
+  animation: appear 0.5s ease forwards;
+}
+
+.menu__info.plat {
+  animation-delay: 0.2s;
+}
+
+.menu__info.dessert {
+  animation-delay: 0.4s;
+}
+
 .menu__background {
   display: flex;
   flex-direction: column;
@@ -695,7 +723,7 @@ section {
   .menu__background {
     width: 100%;
     align-items: center;
-    padding: 2.5rem 15rem;
+    padding: 2.5rem 5rem;
   }
 }
 .menu__background .button__container {
@@ -704,6 +732,12 @@ section {
   margin-top: 2rem;
 }
 
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   margin: 0 auto;
   width: 23.4375rem;
@@ -722,6 +756,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: auto;
 }
 
 .title {
