@@ -301,7 +301,7 @@ input {
   background-image: url("../../assets/images/logo/pinkheart.svg");
 }
 
-.spinner {
+.spinner__background {
   position: fixed;
   width: 23.4375rem;
   height: 100%;
@@ -314,7 +314,7 @@ input {
   -webkit-animation: hide 3s forwards;
 }
 @media (min-width: 768px) {
-  .spinner {
+  .spinner__background {
     width: 100%;
   }
 }
@@ -328,8 +328,8 @@ input {
   border: 3px solid var(--secondary-color, #ff79da);
   border-radius: 50%;
   border-top-color: var(--primary-color, #9356dc);
-  animation: spinner__spin 1s ease-in-out infinite, hide 2s forwards;
-  -webkit-animation: spinner__spin 1s ease-in-out infinite, hide 2s forwards;
+  animation: spinner__spin 1s ease-in-out infinite, hide 3s forwards;
+  -webkit-animation: spinner__spin 1s ease-in-out infinite, hide 3s forwards;
 }
 @media (min-width: 768px) {
   .spinner__spin {
