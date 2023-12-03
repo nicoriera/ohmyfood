@@ -129,12 +129,7 @@ input {
   transition: transform 0.3s ease-in-out;
 }
 .button:hover {
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.15) 0%,
-      rgba(255, 255, 255, 0.15) 100%
-    ),
-    linear-gradient(0deg, #9356dc -5.2%, #ff79da 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(0deg, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.39);
   transform: scale(1.05);
   cursor: pointer;
@@ -292,18 +287,32 @@ input {
 .card__like {
   width: 30px;
   height: 30px;
-  background-image: url("../../assets/images/logo/heart.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
   position: relative;
-  border: 0;
   cursor: pointer;
+}
+
+.heart-image {
+  width: 100%;
+  height: 100%;
   transition: opacity 0.5s ease-in-out;
 }
 
-.card__like:hover {
-  background-image: url("../../assets/images/logo/pinkheart.svg");
+.heart-image:hover {
+  opacity: 0;
+}
+
+.heart-image:hover + img {
+  opacity: 1;
+}
+
+.heart-hover-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .spinner__background {
