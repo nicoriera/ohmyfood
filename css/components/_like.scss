@@ -1,20 +1,34 @@
 .card__like {
   width: 30px;
   height: 30px;
+  background-color: transparent;
   position: relative;
+  border: 0;
   cursor: pointer;
-}
 
-.heart-image {
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.5s ease-in-out;
-}
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+  }
 
-.heart-image:hover {
-  opacity: 0;
-}
+  &::before {
+    background-image: url("../../assets/images/icon/Status=Default.jpg");
+  }
 
-.heart-image:hover + img {
-  opacity: 1;
+  &::after {
+    background-image: url("../../assets/images/icon/Status=Liked.jpg");
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
 }

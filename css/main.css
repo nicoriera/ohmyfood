@@ -287,21 +287,30 @@ input {
 .card__like {
   width: 30px;
   height: 30px;
+  background-color: transparent;
   position: relative;
+  border: 0;
   cursor: pointer;
 }
-
-.heart-image {
+.card__like::before, .card__like::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
   transition: opacity 0.5s ease-in-out;
 }
-
-.heart-image:hover {
+.card__like::before {
+  background-image: url("../../assets/images/icon/Status=Default.jpg");
+}
+.card__like::after {
+  background-image: url("../../assets/images/icon/Status=Liked.jpg");
   opacity: 0;
 }
-
-.heart-image:hover + img {
+.card__like:hover::after {
   opacity: 1;
 }
 
