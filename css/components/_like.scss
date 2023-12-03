@@ -1,7 +1,7 @@
 .card__like {
   width: 30px;
   height: 30px;
-  background-image: url("../../assets/images/logo/heart.svg");
+  background-image: url("./assets/images/logo/heart.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -12,5 +12,5 @@
 }
 
 .card__like:hover {
-  background-image: url("../../assets/images/logo/pinkheart.svg");
+  background-image: url("./assets/images/logo/pinkheart.svg");
 }
