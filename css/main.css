@@ -304,10 +304,10 @@ input {
   transition: opacity 0.5s ease-in-out;
 }
 .card__like::before {
-  background-image: url("../../assets/images/logo/heart.svg");
+  background-image: url("/assets/images/logo/heart.svg");
 }
 .card__like::after {
-  background-image: url("../../assets/images/logo/pinkheart.svg");
+  background-image: url("/assets/images/logo/pinkheart.svg");
   opacity: 0;
 }
 .card__like:hover::after {
